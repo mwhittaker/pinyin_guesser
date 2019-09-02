@@ -1,38 +1,7 @@
 function random_pinyin() {
-  // The set of pinyin we want to guess from.
-  const pinyins = [
-  //      a     o     e    i     u     u
-         "a",  "o",  "e", "yi", "wu", "yu",
-  /*b*/  "ba", "bo",
-  /*p*/  "pa", "po",
-  /*m*/  "ma", "mo", "me",
-  /*f*/  "fa", "fo",
-
-  /*d*/  "da",
-  /*t*/  "ta",
-  /*n*/  "na",
-  /*l*/  "la",
-
-  /*g*/  "ga",
-  /*k*/  "ka",
-  /*h*/  "ha",
-
-  /*z*/  "za",
-  /*c*/  "ca",
-  /*s*/  "sa",
-
-  /*zh*/ "zha",
-  /*ch*/ "cha",
-  /*sh*/ "sha",
-  /*r*/  "ra",
-
-  /*j*/  "cha",
-  /*q*/  "sha",
-  /*x*/  "ra",
-  ];
-
+  const nodes = document.getElementsByClassName('val');
   return {
-    pinyin: pinyins[Math.floor(Math.random() * pinyins.length)],
+    pinyin: nodes[Math.floor(Math.random() * nodes.length)].innerHTML,
     tone: Math.floor(Math.random() * 4),
   };
 }
